@@ -13,13 +13,20 @@ export function generateStaticParams() {
 export default async function LinePage({
   params,
 }: {
-  params: { line: string };
+  params: Promise<{ line: string }>;
 }) {
-  const lineName = decodeURIComponent(params.line);
+  // await the promise to get your real params
+  const { line } = await params;
+  const lineName = decodeURIComponent(line);
+
   return (
     <main style={{ padding: 20, maxWidth: 600, margin: "0 auto" }}>
       <h1>「{lineName}」の駅一覧</h1>
       <Stations line={lineName} />
     </main>
   );
+}
+export function generateStaticParams() {
+  const allLines = stationsData.map((s) => s.line);
+  return Array.from(new Set(allLines)).map((line) => ({ line }));
 }
