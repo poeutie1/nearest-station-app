@@ -10,7 +10,11 @@ export function generateStaticParams() {
   return uniqueLines.map((line) => ({ line }));
 }
 
-export default function LinePage({ params }: { params: { line: string } }) {
+export default async function LinePage({
+  params,
+}: {
+  params: { line: string };
+}) {
   const lineName = decodeURIComponent(params.line);
   return (
     <main style={{ padding: 20, maxWidth: 600, margin: "0 auto" }}>
