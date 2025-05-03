@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Station } from "../../../data/station";
-import stationsData from "../../../data/stations.json";
+import stationsData from "../../../types/stations.json";
 import Link from "next/link";
 
 type Position = { lat: number; lng: number };

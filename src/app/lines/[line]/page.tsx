@@ -1,6 +1,6 @@
 // Stations.tsx や stationsData の import
 import Stations from "./Stations";
-import stationsData from "../../../data/stations.json";
+import stationsData from "../../../types/stations.json";
 import { Station } from "../../../data/station";
 
 // ① generateStaticParams は１回だけ
