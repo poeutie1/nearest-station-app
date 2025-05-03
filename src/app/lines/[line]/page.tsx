@@ -1,21 +1,20 @@
-// 動的パラメータ line の一覧をビルド時に教える
-import { Station } from "../../../data/station";
-import stations from "../../../data/stations.json";
+// Stations.tsx や stationsData の import
 import Stations from "./Stations";
+import stationsData from "../../../data/stations.json";
+import { Station } from "../../../data/station";
 
-// ① ルートとして pre-render したい line の一覧を返す
+// ① generateStaticParams は１回だけ
 export function generateStaticParams() {
-  const allLines = (stations as Station[]).map((s) => s.line);
-  const uniqueLines = Array.from(new Set(allLines));
-  return uniqueLines.map((line) => ({ line }));
+  const allLines = (stationsData as Station[]).map((s) => s.line);
+  return Array.from(new Set(allLines)).map((line) => ({ line }));
 }
 
+// ② 動的ページは async にして params を await
 export default async function LinePage({
   params,
 }: {
   params: Promise<{ line: string }>;
 }) {
-  // await the promise to get your real params
   const { line } = await params;
   const lineName = decodeURIComponent(line);
 
