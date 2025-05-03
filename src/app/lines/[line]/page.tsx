@@ -26,7 +26,3 @@ export default async function LinePage({
     </main>
   );
 }
-export function generateStaticParams() {
-  const allLines = stationsData.map((s) => s.line);
-  return Array.from(new Set(allLines)).map((line) => ({ line }));
-}
