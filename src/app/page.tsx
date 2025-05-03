@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Station } from "../data/station";
-import stations from "../data/stations.json";
+import stations from "../types/stations.json";
 
 export default function Home() {
   // ユニークな路線名一覧を取得
