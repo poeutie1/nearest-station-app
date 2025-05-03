@@ -1,6 +1,7 @@
 {
   "name": "nearest-station-app",
   "version": "0.1.0",
+  "homepage": "https://nearest-station-app-i52t.vercel.app",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
