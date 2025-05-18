@@ -53,9 +53,9 @@ export default function NearestStation({ stations }: { stations: Station[] }) {
   return (
     <div
       style={{
-        background: "#ffeb3b",
+        background: "#996633",
+        color: "white",
         padding: 12,
-        borderRadius: 4,
         marginBottom: 16,
         textAlign: "center",
       }}

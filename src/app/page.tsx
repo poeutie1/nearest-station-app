@@ -9,18 +9,11 @@ export default function Home() {
   const lines = Array.from(new Set((stations as Station[]).map((s) => s.line)));
 
   return (
-    <main
-      style={{
-        padding: 20,
-        maxWidth: 400,
-        margin: "0 auto",
-        textAlign: "center",
-      }}
-    >
+    <main>
       <NearestStation stations={stations} />
       <h1>路線を選択</h1>
 
-      <ul style={{ listStyle: "none", padding: 0, textAlign: "center" }}>
+      <ul style={{ listStyle: "none", padding: 10 }}>
         {lines.map((line, i) => (
           <li key={line} style={{ margin: "8px 0" }}>
             <Button
