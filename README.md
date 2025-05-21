@@ -39,6 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 **現在地から最寄り駅を探す Next.js アプリ**  
 現在(2025/05/18)丸ノ内線・半蔵門線・有楽町線・千代田線・銀座線対応
+
 🚶 路線は違うけど、歩いてすぐ！便利な近接駅を知りたい、また乗り換えを減らしたい人向け
 
 ## ライブデモ
