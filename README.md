@@ -1,60 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nearest Station App
 
-## Getting Started
+現在地から最寄り駅を探すWebアプリケーション
 
-First, run the development server:
+## 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+GPSで取得した現在地から、最寄りの地下鉄駅を検索・表示するアプリです。
+路線は違うけど歩いてすぐの駅を見つけたい、乗り換えを減らしたい人向け。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+対応路線: 丸ノ内線・半蔵門線・有楽町線・千代田線・銀座線
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 主な機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 現在地からの最寄り駅検索
+- 路線別の駅一覧表示
+- Haversine式による距離計算
 
-## Learn More
+## 使用技術
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# 最寄り駅サーチアプリ
-
-**現在地から最寄り駅を探す Next.js アプリ**  
-現在(2025/05/18)丸ノ内線・半蔵門線・有楽町線・千代田線・銀座線対応
-
-🚶 路線は違うけど、歩いてすぐ！便利な近接駅を知りたい、また乗り換えを減らしたい人向け
-
-## ライブデモ
-
-👉 [https://nearest-station-app-i52t.vercel.app/lines/%E4%B8%B8%E3%83%8E%E5%86%85%E7%B7%9A](https://nearest-station-app-i52t.vercel.app)
-
-<!-- Vercel の公式ボタンバッジも貼れます -->
-
-[![Deploy to Vercel](https://vercel.com/button)](https://nearest-station-app-xxxxx.vercel.app)
-
-## インストールと起動
-
-```bash
-git clone https://github.com/ユーザー名/nearest-station-app.git
-cd nearest-station-app
-npm install
-npm run dev
-```
+- **フレームワーク**: Next.js (App Router)
+- **言語**: TypeScript
+- **スタイリング**: CSS Modules
+- **ホスティング**: Vercel
